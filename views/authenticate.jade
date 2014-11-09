@@ -1,0 +1,18 @@
+extends layout
+block content
+    h1 Gallery
+    p Please Enter The Gallery Password Below
+    if message
+        div(class="col-sm-12 row")
+            div(class="alert alert-danger col-sm-3 col-sm-offset-2")
+                a(href="#" class="close" data-dismiss="alert") &times;
+                span #{message}
+    div(class="row")
+        form(method="post" class="form-horizontal" role="form")
+            div(class="form-group")
+                label(for="password" class="col-sm-2 control-label") Password
+                div(class="col-sm-2")
+                    input(type="password" name="password" id="password" class="form-control" placeholder="Password")
+            div(class="form-group")
+                div(class="col-sm-2 col-sm-offset-2")
+                    button(type="submit" class="btn btn-default") Submit

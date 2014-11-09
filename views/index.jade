@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Welcome to Rob's Pictures
+  div
+      h2 Galleries
+      each item in galleries
+          div
+              h3
+                a(href="/gallery/#{item.path}") #{item.title}
+
