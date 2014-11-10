@@ -1,11 +1,14 @@
 extends layout
 
 block content
-  h1 Welcome to Rob's Pictures
   div
       h2 Galleries
-      each item in galleries
-          div
-              h3
-                a(href="/gallery/#{item.path}") #{item.title}
-
+      div(class="row")
+          each item in galleries
+                  div(class="col-sm-3")
+                      div(class="panel panel-info")
+                          div(class="panel-heading panel-title text-center gallery-panel")
+                            a(href="/gallery/#{item.path}") #{item.title}
+                          div(class="panel-body text-center")
+                            a(href="/gallery/#{item.path}")
+                                img(src="#{item.config.thumbnail}")

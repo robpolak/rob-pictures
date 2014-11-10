@@ -1,11 +1,15 @@
 extends layout
 block content
-    h1 Gallery
-    p Download all files here :
+    h1 #{gallery.config.title}
+    p Download all files here: &nbsp;
         a(href="/gallery/#{gallery.path}/#{gallery.config.fullDownloadFile}" target="_blank") Click here to download
-    div
-        each item in gallery.files
-            div(class="gallery")
-                h3
-                    a(href="/gallery/#{gallery.path}/images/#{item.path}" target="_blank")
-                        img(src="/gallery/#{gallery.path}/thumbs/#{item.path}" width="200px")
+    div(class="gallery col-sm-12")
+        each item in gallery.imageFiles
+            div(class="photo col-sm-3")
+                a(class="fancybox" rel="group" href="/gallery/#{gallery.path}/images/#{item.fullImage}" target="_blank")
+                    img(src="/gallery/#{gallery.path}/thumbs/#{item.path}" width="200px")
+    script.
+        $(document).ready(function() {
+            $(".fancybox").fancybox();
+        });
+
