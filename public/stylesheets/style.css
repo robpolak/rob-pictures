@@ -8,14 +8,12 @@ body {
     margin:0 auto;
     padding-left: 0px;
     padding-right: 0px;
-    width:120%;
-    background: url(/images/mainTile.jpg) no-repeat center -250px;
+    width:162%;
+    background: url(/images/mainTile.jpg) no-repeat center center;
     background-size: cover;
     height:350px;
-    padding-top: 50px;
-    padding-bottom: 50px;
     position: relative;
-    left:-50px;
+    left:-130px;
 }
 
 a {

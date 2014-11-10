@@ -7,7 +7,7 @@ block content
         each item in gallery.imageFiles
             div(class="photo col-sm-3")
                 a(class="fancybox" rel="group" href="/gallery/#{gallery.path}/images/#{item.fullImage}" target="_blank")
-                    img(src="/gallery/#{gallery.path}/thumbs/#{item.path}" width="200px")
+                    img(src="/gallery/#{gallery.path}/thumbs/#{item.path}")
     script.
         $(document).ready(function() {
             $(".fancybox").fancybox();
