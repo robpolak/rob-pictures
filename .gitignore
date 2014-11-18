@@ -26,6 +26,9 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+<<<<<<< HEAD
 
 /public/gallery
 gallery.json
+=======
+>>>>>>> origin/master
